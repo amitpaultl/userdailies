@@ -36,3 +36,10 @@
     transform: rotate(360deg);
   }
 }
+
+.firend{
+  background-color: #61dafb;
+  padding: 15px;
+  margin: 10px;
+  border: 1px solid;
+}
