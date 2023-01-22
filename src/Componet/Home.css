@@ -1,0 +1,200 @@
+/* common css */
+.container {
+  width: 1320px;
+  margin: auto;
+}
+
+ul {
+  list-style: none;
+}
+
+h1,p {
+  font-family: Lato;
+}
+
+/* table css */
+
+table {
+
+  margin: 12px 0;
+  padding: 50px 5px;
+  border-radius: 10px;
+  width: 100%;
+  table-layout: fixed;
+}
+
+table caption {
+  font-size: 1.5em;
+  margin: .5em 0 .75em;
+}
+
+table tr {
+  padding: .35em;
+}
+
+table th,table td {
+  text-align: center;
+}
+
+table th {
+  font-size: .85em;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+.other-left {
+  width: 100%;
+}
+
+/* table responsive */
+
+@media screen and (max-width: 600px) {
+  table {
+    border: 0;
+  }
+
+  table caption {
+    font-size: 1.3em;
+  }
+
+  table thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+
+  table tr {
+    border-bottom: 3px solid #ddd;
+    display: block;
+    margin-bottom: .625em;
+  }
+
+  table td {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: .8em;
+    text-align: right;
+  }
+
+  table td::before {
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  table td:last-child {
+    border-bottom: 0;
+  }
+}
+
+@media (min-width: 10px) and (max-width: 838.98px) { 
+  .container {
+    width: auto;
+    margin: auto;
+  }
+}
+
+/* custom */
+
+.table-bg {
+  background-color: #f4f7fc;
+  padding: 21px 16px;
+}
+
+span.btu {
+  background: #f34e4e;
+  padding: 5px 16px;
+  border-radius: 50px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.single-table {
+  border-radius: 20px;
+  background: #fff;
+  margin: 10px 0;
+}
+
+.single-table {
+  border-radius: 20px;
+  background: #fff;
+  margin: 10px 0;
+  padding: 10px 0;
+}
+
+.info-ditties h3 {
+  font-size: 16px;
+  margin: 10px 0 0 0;
+}
+
+.info-ditties p {
+  margin: 0;
+}
+
+.other-info {
+  display: flex;
+}
+
+.other-right {
+  width: 370px;
+}
+
+.info-ditties>p {
+  margin-bottom: 22px;
+}
+
+.info-ditties {
+  padding: 34px;
+  box-shadow: 1px 1px 8px #dcdcdc;
+  margin: 32px;
+  border-radius: 10px;
+}
+
+.active {
+  background: #ff7100;
+
+}
+
+.pagination a {
+  font-size: 17px;
+  margin: 0 10px;
+  width: 21px;
+  height: 21px;
+  display: inline-block;
+  padding: 6px;
+}
+
+
+
+
+
+
+
+/* pagination button */
+.pagination {
+  text-align: center;
+  margin-top: 15px;
+}
+
+ul.pagination-menu li {
+  display: inline-block;
+  background: #e0e0e0;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+ul.pagination-menu li.selected {
+  background: #f34e4e;
+}
+ul.pagination-menu li.next.disabled {
+  visibility: hidden;
+}
+ul.pagination-menu li.previous.disabled {
+  visibility: hidden;
+}
