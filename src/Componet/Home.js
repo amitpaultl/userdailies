@@ -11,12 +11,14 @@ const Home = () => {
     const [items, setData] = useState([])
     // const 
     useEffect(() => {
-        fetch("data.json")
+        fetch("https://jsonplaceholder.typicode.com/users")
             .then((res) => res.json())
             .then((data) => {
                 setData(data)
             });
     }, [])
+
+    console.log(items);
 
     const itemsPerPage = 3
 
@@ -39,7 +41,7 @@ const Home = () => {
                 <div className="container">
                     <div className="table-bg">
                         {
-                            currentItems.map(singleData => <Table tabledata={singleData} key={singleData._id}></Table>)
+                            currentItems.map(singleData => <Table tabledata={singleData} key={singleData.id}></Table>)
                         }
                         <div>
                             <div className="pagination">

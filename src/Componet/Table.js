@@ -17,7 +17,7 @@ const Table = ({ tabledata }) => {
                     <thead>
                         <tr>
                             <th scope="col"></th>
-                            <th scope="col">Contact</th>
+                            <th scope="col">suite</th>
                             <th scope="col">City</th>
                             <th scope="col">State</th>
                             <th scope="col"></th>
@@ -26,9 +26,9 @@ const Table = ({ tabledata }) => {
                     <tbody>
                         <tr>
                             <td data-label="Account">{tabledata.name}</td>
-                            <td data-label="Due Date">{tabledata.concate}</td>
-                            <td data-label="Amount">{tabledata.city}</td>
-                            <td data-label="Period">{tabledata.state}</td>
+                            <td data-label="Due Date">{tabledata.address.suite}</td>
+                            <td data-label="Amount">{tabledata.address.city}</td>
+                            <td data-label="Period">{tabledata.address.street}</td>
                             <td data-label="Period" onClick={handel} > {
                                 toggle ? <span className='btu'>Hide Details</span> : <span className='btu'> view Details</span>
                             }   </td>
@@ -38,24 +38,24 @@ const Table = ({ tabledata }) => {
                 </table>
                 <div className="info-ditties" style={toggle ? { display: "block" } : { display: "none" }}>
                     <h3>Description</h3>
-                    <p>{tabledata.about}</p>
+                    <p>{tabledata.company.catchPhrase}</p>
 
                     <div className="other-info">
                         <div className="other-right">
-                            <h3>Contact Person</h3>
-                            <p>{tabledata.concate}</p>
-                            <h3>Designation</h3>
-                            <p>{tabledata.designation}</p>
+                            <h3>Company Name</h3>
+                            <p>{tabledata.company.name}</p>
+                            <h3>Website</h3>
+                            <p>{tabledata.website}</p>
                             <h3>Phones</h3>
                             <p>{tabledata.phone}</p>
                         </div>
                         <div className="other-left">
                             <h3>Address</h3>
-                            <p>{tabledata.address}</p>
+                            <p>{tabledata.address.street}</p>
                             <h3>City</h3>
-                            <p>{tabledata.city}</p>
-                            <h3>Country</h3>
-                            <p>{tabledata.country}</p>
+                            <p>{tabledata.address.city}</p>
+                            <h3>Username</h3>
+                            <p>{tabledata.username}</p>
                         </div>
                     </div>
                 </div>
